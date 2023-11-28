@@ -1,0 +1,16 @@
+:root{
+    --color-key: #F5A62E;
+    --color-key2: #FFEBCE;
+    --color-key3: #FE554A;
+    --color-back: #ECECEC;
+}
+body {background: #f5f5f5; padding: 50px 100px;}
+input {padding: 0 0 0 60px; width: 630px; height: 60px; background: var(--color-back); border-radius: 15px; font-size: 24px; border: none; outline: none; background-image: url(./img/mag.png);background-repeat: no-repeat;  background-position: 20px center;}
+input::placeholder {color:#aaacae;}
+
+header nav {display: flex;}
+header nav > * {margin-right: 10px; }
+header nav .imgWrap {width: 60px; height: 60px; background: var(--color-back); border-radius: 10px; display: flex; align-items: center; justify-content: center; cursor: pointer; position: relative;}
+header nav .imgWrap.menu {background: var(--color-key);}
+header nav .imgWrap.on {background: var(--color-key2); border:1px solid var(--color-key);}
+header nav .imgWrap .num {padding: 4px 0 0; width: 25px;height: 25px;border-radius: 50%; text-align: center; background:var(--color-key) ; color: #fff; position: absolute;top: -14px;right: -14px;}
