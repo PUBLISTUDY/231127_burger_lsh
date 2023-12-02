@@ -3,10 +3,11 @@
     --color-key2: #FFEBCE;
     --color-key3: #FE554A;
     --color-back: #ECECEC;
+    --color-back2: #aaacae;
 }
-body {background: #f5f5f5; padding: 50px 100px;}
+body {background: #f5f5f5; padding: 50px 100px 0;}
 input {padding: 0 0 0 60px; width: 630px; height: 60px; background: var(--color-back); border-radius: 15px; font-size: 24px; border: none; outline: none; background-image: url(./img/mag.png);background-repeat: no-repeat;  background-position: 20px center;}
-input::placeholder {color:#aaacae;}
+input::placeholder {color:var(--color-back2);}
 
 header nav {display: flex;}
 header nav > * {margin-right: 10px; }
@@ -14,3 +15,48 @@ header nav .imgWrap {width: 60px; height: 60px; background: var(--color-back); b
 header nav .imgWrap.menu {background: var(--color-key);}
 header nav .imgWrap.on {background: var(--color-key2); border:1px solid var(--color-key);}
 header nav .imgWrap .num {padding: 4px 0 0; width: 25px;height: 25px;border-radius: 50%; text-align: center; background:var(--color-key) ; color: #fff; position: absolute;top: -14px;right: -14px;}
+
+main nav {display: flex; margin:30px 0; font-size: 24px; font-weight: bold;}
+main nav .menu {display: flex; align-items: center; color: var(--color-back2);}
+main nav .menu .circle {display: none; margin:0 10px; width: 10px;height: 10px; border-radius: 50%; background: var(--color-key);}
+main nav .menu.on .tit {color:#000;}
+main nav .menu.on .circle {display:block;}
+
+main .menuWrap {display: flex; margin: 30px 0; }
+main .menuWrap > li {margin-right: 25px; padding: 10px; width: 120px;height: 120px;border-radius: 50px; border:1px solid #f0cac1; text-align: center; font-weight: bold; cursor: pointer;}
+main .menuWrap > li .inner {padding-top: 10px; width: 100px;height: 100px;border-radius: 50px; background: rgba(240, 204, 193, 0.1); }
+main .menuWrap > li .inner .img {font-size: 48px;}
+main .menuWrap > li .inner .tit {margin-top: 7px; font-size: 18px;}
+
+main .menuWrap > .on {border:1px solid rgba(62, 192, 50, 1);}
+main .menuWrap > .on .inner {background:rgba(169, 232, 139, 0.4);}
+
+main .deeperMenu .tit {margin-bottom: 80px; font-size: 36px; font-weight: bold;}
+main .deeperMenu .deepMenu {display: flex;}
+main .deeperMenu .deepMenu > li {margin-right: 30px; padding:70px 20px 10px; width: 230px; height: 270px; border-radius: 30px; background: #fff; position:relative;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
+main .deeperMenu .deepMenu > li > img {position: absolute;top: -80px;left: 50%;transform: translateX(-50%);}
+main .deeperMenu .deepMenu > li > .sub {font-size:24px; font-weight: bold;}
+main .deeperMenu .deepMenu > li > .cont {margin:20px 0; font-size: 14px;}
+
+main .deeperMenu .deepMenu > li .menuFoot {display: flex; align-items: center; position: relative;}
+main .deeperMenu .deepMenu > li .menuFoot .rate {margin-left: 5px; font-size: 24px;}
+main .deeperMenu .deepMenu > li .menuFoot .cost {margin-left: auto; margin-right: 40px; font-size: 18px; font-weight: bold; color: var(--color-key3);}
+main .deeperMenu .deepMenu > li .menuFoot .plusBtn {display: flex; justify-content: center; font-size: 30px; width: 40px;height: 40px;border-radius: 50%; background: var(--color-key3); color: #fff; position: absolute;top: -10px;right: -10px;}
+
+aside {padding:50px 20px 50px; width: 370px; height: 100%; border-radius: 30px; background: #fff; position: absolute;top: 0;right: 0;}
+aside .btn {text-align: center; background: rgba(249, 136, 31, 1); color: #fff; cursor: pointer;}
+
+aside .edit {display: block; margin: 0 auto;}
+aside > .tit {margin:30px 0 20px; font-size:36px; font-weight: bold; text-align: center;}
+aside .cartWrap > li {margin: 10px 0; display: flex; align-items: center; padding:20px 10px; width: 100%; height:110px; border-radius: 30px; border: 1px solid #ECECEC;}
+aside .cartWrap > li .cartMenu .menu {font-weight: bold; font-size: 24px;}
+aside .cartWrap > li .cartMenu .cost {margin:10px 0 0; color: var(--color-key3); font-size: 18px;}
+aside .cartWrap > li .count {margin: 30px 0 0; display: flex; align-items: center;}
+aside .cartWrap > li .count .pm {width: 20px;height: 20px;border-radius: 50%;}
+aside .cartWrap > li .count .num {margin: 0 5px;}
+aside .totalWrap {margin:25px 0; padding: 20px; width: 100%; height: 130px; border-radius: 20px; border: 2px solid rgba(245, 166, 46, 1);font-size: 24px;}
+aside .totalWrap > div {margin-bottom: 10px; display: flex; justify-content: space-between;}
+aside .totalWrap .tit {color: #585858;}
+aside .totalWrap .cost {font-weight: bold;}
+aside .totalWrap .tax .cost {color:#fe5f55;}
+aside .pay {width: 100%; height: 85px; border-radius: 20px; line-height: 85px; font-weight: bold; font-size: 36px; background-image: linear-gradient(to bottom right, #F9881F, #FF774C);}
